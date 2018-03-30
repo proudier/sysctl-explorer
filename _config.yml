@@ -10,6 +10,8 @@ description: >- # this means to ignore newlines until "baseurl:"
 url: "https://sysctl-explorer.net"
 baseurl: "" # the subpath of your site, e.g. /blog
 
+last-db-update: 2018-12-09 18:93:01 UTC
+
 markdown: kramdown
 plugins:
   - jekyll-feed
