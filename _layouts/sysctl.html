@@ -4,16 +4,17 @@
 <!-- Breadcrumb -->
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">sys</a></li>
-        <li class="breadcrumb-item"><a href="#">vm</a></li>
-        <li class="breadcrumb-item active" aria-current="page">min_free_kbytes</li>
+        {% for crumb in breadcrumbs %}
+        <li class="breadcrumb-item"><a href="{{ crumb.url }}">{{ crumb.title }}</a></li>
+        {% endfor %}
     </ol>
 </nav>
 
+
 <h1>{{ page.title }} </h1>
 <pre>
-    file: {{ page.file }}
-    variable: {{ page.variable }}
+    file: {{ page.sysctl-file }}
+    variable: {{ page.sysctl-variable }}
 </pre>
 
 

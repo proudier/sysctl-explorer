@@ -1,0 +1,7 @@
+<h1>{{ include.sysctl-category }}</h1>
+
+{% for page in site.pages %}
+    {% if page.sysctl-category == include.sysctl-category %}
+        <p><a href="{{ page.url }}"> {{ page.title }}</a></p>
+    {% endif %}
+{% endfor %}

@@ -1,9 +1,10 @@
 ---
 layout: sysctl
 title: min_free_kbytes
-file: /proc/sys/vm/min_free_kbytes
-variable: vm.min_free_kbytes
-source: https://www.kernel.org/doc/Documentation/sysctl/fs.txt
+sysctl-category: vm
+sysctl-file: /proc/sys/vm/min_free_kbytes
+sysctl-variable: vm.min_free_kbytes
+source: https://www.kernel.org/doc/Documentation/sysctl/vm.txt
 ---
 This is used to force the Linux VM to keep a minimum number
 of kilobytes free. The VM uses this number to compute a
