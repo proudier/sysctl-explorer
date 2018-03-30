@@ -1,0 +1,29 @@
+{% include header.html %}
+
+
+<!-- Breadcrumb -->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">sys</a></li>
+        <li class="breadcrumb-item"><a href="#">vm</a></li>
+        <li class="breadcrumb-item active" aria-current="page">min_free_kbytes</li>
+    </ol>
+</nav>
+
+<h1>{{ page.title }} </h1>
+<pre>
+    file: {{ page.file }}
+    variable: {{ page.variable }}
+</pre>
+
+
+<!-- Official reference -->
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Official reference</h5>
+        {{ content | markdownify }}
+        <a href="{{ page.source }}" class="card-link" target="_blank">source</a>
+    </div>
+</div>
+
+{% include footer.html %}
