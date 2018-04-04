@@ -33,28 +33,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ "abi" | absolute_url }}">abi</a>
+                    <a class="nav-link" href="{{ site.baseurl }}{% link fs/index.html %}">fs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ "debug" | absolute_url }}">debug</a>
+                    <a class="nav-link" href="{{ site.baseurl }}{% link kernel/index.html %}">kernel</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ "dev" | absolute_url }}">dev</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ "fs" | absolute_url }}">fs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ "kernel" | absolute_url }}">kernel</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ "net" | absolute_url }}">net</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ "user" | absolute_url }}">user</a>
+                    <a class="nav-link" href="{{ site.baseurl }}{% link net/index.html %}">net</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ site.baseurl }}{% link sunrpc/index.html %}">sunrpc</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ site.baseurl }}{% link user/index.html %}">user</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ site.baseurl }}{% link vm/index.html %}">vm</a>

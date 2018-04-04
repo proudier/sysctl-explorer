@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{% capture capture-description %}
+
+This file contains documentation for the sysctl files in
+/proc/sys/kernel/ and is valid for Linux kernel version 2.2.
+
+The files in this directory can be used to tune and monitor
+miscellaneous and general things in the operation of the Linux
+kernel. Since some of the files _can_ be used to screw up your
+system, it is advisable to read both documentation and source
+before actually making adjustments.
+
+{% endcapture %}
+
+{% include listing.html sysctl-category="kernel" description=capture-description %}
