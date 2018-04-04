@@ -2,4 +2,18 @@
 layout: default
 ---
 
-{% include listing.html sysctl-category="vm"  %}
+{% capture capture-description %}
+
+This file contains the documentation for the sysctl files in
+/proc/sys/vm and is valid for Linux kernel version 2.6.29.
+
+The files in this directory can be used to tune the operation
+of the virtual memory (VM) subsystem of the Linux kernel and
+the writeout of dirty data to disk.
+
+Default values and initialization routines for most of these
+files can be found in mm/swap.c.
+
+{% endcapture %}
+
+{% include listing.html sysctl-category="vm" description=capture-description %}
