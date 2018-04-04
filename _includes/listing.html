@@ -1,7 +1,12 @@
 <h1>{{ include.sysctl-category }}</h1>
 
-{% for page in site.pages %}
+<div class="row">
+
+{% assign sorted = (site.pages | sort: 'title') %}
+{% for page in sorted %}
     {% if page.sysctl-category == include.sysctl-category %}
-        <p><a href="{{ page.url }}"> {{ page.title }}</a></p>
+    <div class="col-6 col-md-4"><a href="{{ page.url }}"> {{ page.title }}</a></div>
     {% endif %}
 {% endfor %}
+
+</div>

@@ -1,0 +1,11 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+@import 'custom';
+@import 'bootstrap';
+
+.card {
+  margin: 2rem 0 2rem 0;
+  box-shadow: inset -1px -1px 0px #dddddd;
+}

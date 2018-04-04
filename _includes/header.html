@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ "custom.css" | absolute_url }}">
+    <link rel="stylesheet" href="{{ "main.css" | absolute_url }}">
     <title>
         {% if page.title.size > 0 %}
         {{ page.title }}
@@ -18,11 +16,12 @@
     <meta name="author" content="{{ site.author }}">
     <link rel="icon" type="image/png" href="{{ site.favicon_png | absolute_url }}">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300" rel="stylesheet">
 </head>
 
 <body>
-<div class="container">
 
+<div class="container">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" href="{{ site.url }}">Sysctl Explorer</a>
