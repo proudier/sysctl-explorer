@@ -1,8 +1,21 @@
-<div class="p-3 mb-2 bg-info">
-    <p class="text-center">
-        Last update: {{ site.last-db-update }}<br/>
-        Brought to you by {{site.author }}</p>
+<div class="bg-info my-footer">
+    <div class="row">
+        <div class="col-12 col-md-8">
+            <p class="small my-footer-text">
+                Last update: {{ site.last-db-update }}
+            </p>
+        </div>
+        <div class="col-12 col-md-4">
+            <p class="small my-footer-text">
+                Sysctl Explorer is <a href="https://github.com/proudier/sysctl-explorer/">available</a> under the
+                <a href="{{ "gpl-2.0.txt" | absolute_url }}">GPL-2.0</a><br/>
+                Kernel documentation © the Linux kernel authors<br/>
+                Linux® is a <a href="https://www.linuxmark.org/">registered trademark</a> of Linus Torvalds
+            </p>
+        </div>
+    </div>
 </div>
+
 
 </div> <!-- container -->
 
