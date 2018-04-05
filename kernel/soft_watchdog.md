@@ -9,8 +9,8 @@ source: https://www.kernel.org/doc/Documentation/sysctl/kernel.txt
 
 This parameter can be used to control the soft lockup detector.
 
-   0 - disable the soft lockup detector
-   1 - enable the soft lockup detector
+-   0 - disable the soft lockup detector
+-   1 - enable the soft lockup detector
 
 The soft lockup detector monitors CPUs for threads that are hogging the CPUs
 without rescheduling voluntarily, and thus prevent the 'watchdog/N' threads

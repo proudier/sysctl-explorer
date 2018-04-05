@@ -8,7 +8,8 @@ source: https://www.kernel.org/doc/Documentation/sysctl/fs.txt
 ---
 
 From linux/fs/dentry.c:
---------------------------------------------------------------
+
+```
 struct {
         int nr_dentry;
         int nr_unused;
@@ -16,7 +17,7 @@ struct {
         int want_pages;        /* pages requested by system */
         int dummy[2];
 } dentry_stat = {0, 0, 45, 0,};
--------------------------------------------------------------- 
+```
 
 Dentries are dynamically allocated and deallocated, and
 nr_dentry seems to be 0 all the time. Hence it's safe to

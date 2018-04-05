@@ -12,11 +12,13 @@ reclaimable slab objects like dentries and inodes.  Once dropped, their
 memory becomes free.
 
 To free pagecache:
-	echo 1 > /proc/sys/vm/drop_caches
+	`echo 1 > /proc/sys/vm/drop_caches`
+
 To free reclaimable slab objects (includes dentries and inodes):
-	echo 2 > /proc/sys/vm/drop_caches
+	`echo 2 > /proc/sys/vm/drop_caches`
+
 To free slab objects and pagecache:
-	echo 3 > /proc/sys/vm/drop_caches
+	`echo 3 > /proc/sys/vm/drop_caches`
 
 This is a non-destructive operation and will not free any dirty objects.
 To increase the number of objects freed by this operation, the user may run

@@ -14,9 +14,9 @@ in the system.
 
 This is value ORed together of
 
-1	= Zone reclaim on
-2	= Zone reclaim writes dirty pages out
-4	= Zone reclaim swaps pages
+- 1	= Zone reclaim on
+- 2	= Zone reclaim writes dirty pages out
+- 4	= Zone reclaim swaps pages
 
 zone_reclaim_mode is disabled by default.  For file servers or workloads
 that benefit from having their data cached, zone_reclaim_mode should be

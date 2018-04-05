@@ -8,15 +8,16 @@ source: https://www.kernel.org/doc/Documentation/sysctl/kernel.txt
 ---
 
 core_pattern is used to specify a core dumpfile pattern name.
-. max length 128 characters; default value is "core"
-. core_pattern is used as a pattern template for the output filename;
+- max length 128 characters; default value is "core"
+- core_pattern is used as a pattern template for the output filename;
   certain string patterns (beginning with '%') are substituted with
   their actual values.
-. backward compatibility with core_uses_pid:
+- backward compatibility with core_uses_pid:
 	If core_pattern does not include "%p" (default does not)
 	and core_uses_pid is set, then .PID will be appended to
 	the filename.
-. corename format specifiers:
+- corename format specifiers:
+```
 	%<NUL>	'%' is dropped
 	%%	output one '%'
 	%p	pid
@@ -33,7 +34,8 @@ core_pattern is used to specify a core dumpfile pattern name.
 	%e	executable filename (may be shortened)
 	%E	executable path
 	%<OTHER> both are dropped
-. If the first character of the pattern is a '|', the kernel will treat
+```
+- If the first character of the pattern is a '|', the kernel will treat
   the rest of the pattern as a command to run.  The core dump will be
   written to the standard input of that program instead of to a file.
 

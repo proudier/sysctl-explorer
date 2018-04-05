@@ -13,6 +13,6 @@ ceil(shmmax/PAGE_SIZE).
 
 If you are not sure what the default PAGE_SIZE is on your Linux
 system, you can run the following command:
-
+```
 # getconf PAGE_SIZE
-
+```

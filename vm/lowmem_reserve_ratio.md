@@ -32,10 +32,10 @@ applications are using mlock(), or if you are running with no swap then
 you probably should change the lowmem_reserve_ratio setting.
 
 The lowmem_reserve_ratio is an array. You can see them by reading this file.
--
+```
 % cat /proc/sys/vm/lowmem_reserve_ratio
 256     256     32
--
+```
 Note: # of this elements is one fewer than number of zones. Because the highest
       zone's value is not necessary for following calculation.
 
@@ -44,7 +44,7 @@ pages for each zones from them. These are shown as array of protection pages
 in /proc/zoneinfo like followings. (This is an example of x86-64 box).
 Each zone has an array of protection pages like this.
 
--
+```
 Node 0, zone      DMA
   pages free     1355
         min      3
@@ -58,7 +58,7 @@ Node 0, zone      DMA
   pagesets
     cpu: 0 pcp: 0
         :
--
+```
 These protections are added to score to judge whether this zone should be used
 for page allocation or should be reclaimed.
 
@@ -70,7 +70,7 @@ normal page requirement. If requirement is DMA zone(index=0), protection[0]
 (=0) is used.
 
 zone[i]'s protection[j] is calculated by following expression.
-
+```
 (i < j):
   zone[i]->protection[j]
   = (total sums of managed_pages from zone[i+1] to zone[j] on the node)
@@ -79,7 +79,7 @@ zone[i]'s protection[j] is calculated by following expression.
    (should not be protected. = 0;
 (i > j):
    (not necessary, but looks 0)
-
+```
 The default values of lowmem_reserve_ratio[i] are
     256 (if zone[i] means DMA or DMA32 zone)
     32  (others).

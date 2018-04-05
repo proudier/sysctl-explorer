@@ -10,11 +10,15 @@ source: https://www.kernel.org/doc/Documentation/sysctl/kernel.txt
 These files can be used to set the NIS/YP domainname and the
 hostname of your box in exactly the same way as the commands
 domainname and hostname, i.e.:
+```
 # echo "darkstar" > /proc/sys/kernel/hostname
 # echo "mydomain" > /proc/sys/kernel/domainname
+```
 has the same effect as
+```
 # hostname "darkstar"
 # domainname "mydomain"
+```
 
 Note, however, that the classic darkstar.frop.org has the
 hostname "darkstar" and DNS (Internet Domain Name Server)

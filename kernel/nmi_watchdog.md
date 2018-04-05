@@ -10,8 +10,8 @@ source: https://www.kernel.org/doc/Documentation/sysctl/kernel.txt
 This parameter can be used to control the NMI watchdog
 (i.e. the hard lockup detector) on x86 systems.
 
-   0 - disable the hard lockup detector
-   1 - enable the hard lockup detector
+-   0 - disable the hard lockup detector
+-   1 - enable the hard lockup detector
 
 The hard lockup detector monitors each CPU for its ability to respond to
 timer interrupts. The mechanism utilizes CPU performance counter registers
