@@ -3,9 +3,32 @@ layout: default
 ---
 
 {% capture capture-description %}
-TODO
 
+This file contains the documentation for the sysctl files in
+/proc/sys/net
 
+The interface  to  the  networking  parts  of  the  kernel  is  located  in
+/proc/sys/net. The following table shows all possible subdirectories.  You may
+see only some of them, depending on your kernel's configuration.
+
+```
+Table : Subdirectories in /proc/sys/net
+..............................................................................
+Directory Content             Directory  Content
+core      General parameter   appletalk  Appletalk protocol
+unix      Unix domain sockets netrom     NET/ROM
+802       E802 protocol       ax25       AX25
+ethernet  Ethernet protocol   rose       X.25 PLP layer
+ipv4      IP version 4        x25        X.25 protocol
+ipx       IPX                 token-ring IBM token ring
+bridge    Bridging            decnet     DEC net
+ipv6      IP version 6        tipc       TIPC
+..............................................................................
+```
+
+<a class="nav-link" href="{{ site.baseurl }}{% link net/core/index.html %}">core</a>
+<a class="nav-link" href="{{ site.baseurl }}{% link net/ipv4/index.html %}">ipv4</a>
+<a class="nav-link" href="{{ site.baseurl }}{% link net/ipv6/index.html %}">ipv6</a>
 {% endcapture %}
 
-{% include listing.html sysctl-category="net" description=capture-description %}
+{% include simple.html sysctl-category="net" description=capture-description %}
