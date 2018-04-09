@@ -1,0 +1,59 @@
+{% include header.html %}
+
+
+<div style="margin: 40px"></div>
+
+<h1>Welcome to sysctl-explorer</h1>
+
+<div style="margin: 40px"></div>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">What are sysctls?</h5>
+        <p>Sysctl is a means of configuring certain aspects of the kernel
+            at run-time, and the /proc/sys/ directory is there so that you
+            don't even need special tools to do it!</p>
+
+        <p>In fact, there are only four things needed to use these config
+            facilities:
+        <ul>
+            <li>a running Linux system</li>
+            <li>root access</li>
+            <li>common sense (this is especially hard to come by these days)</li>
+            <li>knowledge of what all those values mean</li>
+        </ul>
+        </p>
+
+        <p>As a quick 'ls /proc/sys' will show, the directory consists of
+            several (arch-dependent?) subdirs. Each subdir is mainly about
+            one part of the kernel, so you can do configuration on a piece
+            by piece basis, or just some 'thematic frobbing'.</p>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">What is Sysctl Explorer?</h5>
+        <p>Sysctl Explorer is an initiative to facilitate the access of Linux' sysctl reference documentation. This is a work in progress and you may consider this increment as a <a href="https://en.wikipedia.org/wiki/Minimum_viable_product" target="'_blank">Minimum viable product (MVP)</a> version.</p>
+    </div>
+</div>
+
+
+<div style="margin: 40px"></div>
+
+{% comment %}
+<h5>Site news</h5>
+
+<ul>
+    {% for post in site.posts limit:3 %}
+    <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        {{ post.excerpt }}
+    </li>
+    {% endfor %}
+</ul>
+
+<div style="margin: 40px"></div>
+{% endcomment %}
+
+{% include footer.html %}
