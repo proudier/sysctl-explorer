@@ -119,7 +119,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
-  bootstrap (= 4.0.0)
+  bootstrap (~> 4.0.0)
   jekyll (~> 3.7.3)
   jekyll-assets
   jekyll-feed
