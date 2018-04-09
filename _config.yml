@@ -22,3 +22,25 @@ exclude:
 
 sass:
   style: compressed
+
+defaults:
+  -
+    scope:
+      path: "fs"
+    values:
+      permalink: /:path/:basename/
+  -
+    scope:
+      path: "kernel"
+    values:
+      permalink: /:path/:basename/
+  -
+    scope:
+      path: "net"
+    values:
+      permalink: /:path/:basename/
+  -
+    scope:
+      path: "vm"
+    values:
+      permalink: /:path/:basename/
