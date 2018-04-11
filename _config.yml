@@ -40,3 +40,8 @@ defaults:
       path: "vm"
     values:
       permalink: /:path/:basename/
+
+algolia:
+  application_id: GOBDHY63K2
+  index_name: sysctl-explorer
+  search_only_api_key: 5a2c0202b889e92cb65433bc586daef4
