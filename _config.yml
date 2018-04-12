@@ -15,6 +15,7 @@ plugins:
 
 exclude:
   - .idea
+  - _algolia_api_key
 
 sass:
   style: compressed
@@ -45,3 +46,11 @@ algolia:
   application_id: GOBDHY63K2
   index_name: sysctl-explorer
   search_only_api_key: 5a2c0202b889e92cb65433bc586daef4
+  extensions_to_index: ['md']
+  files_to_exclude:
+    - _posts/*
+  settings:
+    searchableAttributes:  ['title', 'sysctl-variable', 'sysctl-file']
+    attributesToHighlight: ['title', 'sysctl-variable', 'sysctl-file']
+    attributesToRetrieve: ['url']
+    attributesToSnippet: []
