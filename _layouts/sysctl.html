@@ -2,13 +2,23 @@
 
 
 <!-- Breadcrumb -->
+{% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
 <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        {% for crumb in breadcrumbs %}
-        <li class="breadcrumb-item"><a href="{{ crumb.url }}">{{ crumb.title }}</a></li>
+    <ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+        {% for crumb in crumbs offset: 1 %}
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            {% if forloop.last %}
+                {{ crumb | replace:'-',' ' | remove:'.html' }}
+            {% else %}
+                <a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}" itemscope itemtype="http://schema.org/Thing" itemprop="item"><span itemprop="name">{{ crumb | replace:'-',' ' | remove:'.html' }}</span></a>
+                <meta itemprop="position" content="{{ forloop.index }}" />
+            {% endif %}
+        </li>
         {% endfor %}
     </ol>
 </nav>
+
+
 
 
 <h1>{{ page.title }} </h1>
