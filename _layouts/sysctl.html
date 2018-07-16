@@ -7,6 +7,7 @@
     <ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
         {% for crumb in crumbs offset: 1 %}
         <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <meta itemprop="position" content="{{ forloop.index }}" />
             {% if forloop.last %}
                 {{ crumb | replace:'-',' ' | remove:'.html' }}
             {% else %}
